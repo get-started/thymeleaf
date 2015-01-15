@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.thymeleaf:thymeleaf:2.1.4.RELEASE'
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.thymeleaf:thymeleaf-testing:2.1.4.RELEASE'
+}
+
+idea {
+    module {
+        downloadSources = false
+        downloadJavadoc = false
+        excludeDirs += [file('.idea'), file('.gradle'), file('gradle')]
+        outputDir = sourceSets.main.output.classesDir
+        testOutputDir = sourceSets.test.output.classesDir
+    }
+}
+
+processTestResources{
+    destinationDir=sourceSets.test.output.classesDir
+}

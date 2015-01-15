@@ -1,0 +1,10 @@
+%TEMPLATE_MODE HTML5
+#-------------------------
+
+%INPUT
+<html th:lang="${lang}"></html>
+
+#-------------------------
+
+%OUTPUT
+<html lang=""></html>

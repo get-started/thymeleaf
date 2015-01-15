@@ -1,0 +1,11 @@
+%TEMPLATE_MODE HTML5
+
+#-------------------------
+
+%INPUT
+<html xmlns:th="http://www.thymeleaf.org"></html>
+
+#-------------------------
+
+%OUTPUT
+<html></html>
